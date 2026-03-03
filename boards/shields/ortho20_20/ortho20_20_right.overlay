@@ -1,0 +1,26 @@
+#include "ortho20_20.dtsi"
+
+/ {
+    kscan0: kscan0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row";
+        wakeup-source;
+
+        col-gpios
+            = 
+            ;
+
+        row-gpios
+            = 
+            ;
+    };
+};
+
+&matrix_transform0 {
+    col-offset = <6>;
+};
+
+&physical_layout_ortho20_20 {
+    kscan = <&kscan0>;
+};
+

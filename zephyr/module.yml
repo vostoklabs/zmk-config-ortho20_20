@@ -1,0 +1,4 @@
+name: zmk-keyboard-ortho20-20
+build:
+  settings:
+    board_root: .
