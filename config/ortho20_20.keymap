@@ -1,17 +1,42 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#define BASE 0
+#define LOWER 1
+
 / {
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "Base";
+            // -----------------------------------------
+            // | ESC | Q  | W  | E  | R  | T  |
+            // | SHF | A  | S  | D  | F  | G  |
+            // | TAB | Z  | X  | C  | V  | B  |
+            // | CTL | WIN| ALT| WIN| LWR| SPC|
+            // -----------------------------------------
             bindings = <
-                &kp A &kp B &kp C &kp D &kp E &kp F
-                &kp G &kp H &kp I &kp J &kp K &kp L
-                &kp M &kp N &kp O &kp P &kp Q &kp R
-                &kp S &kp T &kp U &kp V &kp W &kp X
+                &kp ESC   &kp Q     &kp W     &kp E     &kp R     &kp T
+                &kp LSHFT &kp A     &kp S     &kp D     &kp F     &kp G
+                &kp TAB   &kp Z     &kp X     &kp C     &kp V     &kp B
+                &kp LCTRL &kp LGUI  &kp LALT  &kp RGUI  &mo LOWER &kp SPACE
+            >;
+        };
+
+        lower_layer {
+            display-name = "Lower";
+            // -----------------------------------------
+            // |  `  | 1  | 2  | 3  | 4  | 5  |
+            // | SHF | F1 | F2 | F3 | F4 | F5 |
+            // | TAB | F7 | F8 | F9 | F10| F11|
+            // | CTL | WIN| ALT| WIN|    | ENT|
+            // -----------------------------------------
+            bindings = <
+                &kp GRAVE &kp N1    &kp N2    &kp N3    &kp N4    &kp N5
+                &kp LSHFT &kp F1    &kp F2    &kp F3    &kp F4    &kp F5
+                &kp TAB   &kp F7    &kp F8    &kp F9    &kp F10   &kp F11
+                &kp LCTRL &kp LGUI  &kp LALT  &kp RGUI  &trans    &kp RET
             >;
         };
     };
