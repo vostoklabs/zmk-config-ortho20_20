@@ -19,10 +19,6 @@
 #
 ---
 include:
-
-  - board: nice_nano_v2
-    shield: ortho20_20_left
-
 ## To build with ZMK Studio support, uncomment the following block
 ## by removing the leading '#' from each line.
 
